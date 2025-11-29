@@ -68,10 +68,10 @@
       <h1>Hi, I'm Vamshika Sutar</h1>
       <p>
         AI Research Enthusiast<br>
-        Bachelors in Civil Engineering & Minor in Computer Science & Engineering
+        Bachelor's in Civil Engineering & Minor in Computer Science & Engineering
       </p>
       <p>
-        Research Interests: Computer Vision, Deep Learning, Intelligent Mobility
+        Research Interests: Computer Vision and Deep Learning
       </p>
       <p style="margin-top:6px;font-size:13px;color:#d1d5db;">
         <a href="mailto:vamshikasutar.iitb@gmail.com" style="color:#d1d5db;text-decoration:none;">Contact: vamshikasutar.iitb@gmail.com</a>
@@ -93,9 +93,9 @@ const DATA = {
       popupHeading: "Vision-based Learning Systems for Semi-Automated Forklifts",
       image: "FedExIITB.png",
       popupLines: [
-        "Bachelors Thesis Project",
+        "Bachelor's Thesis Project",
         "Guide: Prof. Archak Mittal",
-        "In collaboration with FedEx India"
+        "Part of the IIT Bombay–FedEx ALFA R&D collaboration"
       ]
     },
     research2: {
@@ -233,14 +233,14 @@ const DATA = {
 
   publications: {
     publication1: { title: "Spatiotemporal deep learning models for detection of rapid intensification in cyclones", paper: "https://www.arxiv.org/abs/2506.08397", image: "Screenshot 2025-10-11 003517.png" },
-    publication2: { title: "Learning-Based Vision Systems for Semi-Autonomous Forklift Operation", paper: "#", image: "forklift.png" },
-    publication3: { title: "Delhi air quality prediction using LSTM", paper: "#", image: "Screenshot 2025-10-11 004010.png" },
-    publication4: { title: "Parkinson’s Disease Detection Using ComParE Features", paper: "#", image: "PD.png" }
+    publication2: { title: "Learning-Based Vision Systems for Semi-Autonomous Forklift Operation in Industrial Warehouse Environments", paper: "https://arxiv.org/abs/2511.06295", image: "forklift.png" },
+    publication3: { title: "Delhi air quality prediction using LSTM deep learning models with a focus on COVID-19 lockdown", paper: "#", image: "Screenshot 2025-10-11 004010.png" },
+    publication4: { title: "Parkinson’s Disease Detection Using ComParE Features", paper: "https://drive.google.com/file/d/1NlpaMvES_DTwvW1Q-hW7irqP3HlNEgvz/view?usp=sharing", image: "PD.png" }
   },
 
   conferences: {
-    conference1: { title: "Evaluating Semantic Segmentation-Based Scene Descriptions for Rural Highway Point Clouds", paper: "https://github.com/VamshikaSutar/Reports-and-Presentations/blob/main/IRF%20Conference.pdf", image: "IRF.png" },
-    conference2: { title: "Intelligent Roadway Analysis: Automated Object Identification and Scene Description Retrieval for Highway Features", paper: "https://github.com/VamshikaSutar/Reports-and-Presentations/blob/main/University%20of%20Alberta%20International%20Symposium%20Poster.pdf", image: "Screenshot 2025-10-11 005253.png" }
+    conference1: { title: "Evaluating Semantic Segmentation-Based Scene Descriptions for Rural Highway Point Clouds", paper: "https://github.com/VamshikaSutar/Reports-and-Presentations/blob/main/IRF\%20Conference.pdf", image: "IRF.png" },
+    conference2: { title: "Intelligent Roadway Analysis: Automated Object Identification and Scene Description Retrieval for Highway Features", paper: "https://github.com/VamshikaSutar/Intelligent-Roadway-Analysis-Automated-Object-Identification-and-Scene-Description-Retrieval-/blob/main/University%20of%20Alberta%20International%20Symposium%20Poster.pdf", image: "Screenshot 2025-10-11 005253.png" }
   }
 };
 </script>
@@ -349,7 +349,7 @@ function renderConferences(){
     const paperUrl = it.paper && it.paper !== '#' ? it.paper : '';
     const img = it.image ? escapeHtml(it.image) : 'images/conferences.png';
     card.innerHTML = `<img src="${img}" alt="${escapeHtml(it.title)}"><h3>${escapeHtml(it.title)}</h3>
-      ${paperUrl ? `<a class="paper-link" href="${escapeHtml(paperUrl)}" target="_blank" rel="noopener">Paper</a>` : `<a class="paper-link" href="#" onclick="alert('No manuscript URL set. Edit DATA.conferences.${k}.paper')">Paper</a>`}`;
+      ${paperUrl ? `<a class="paper-link" href="${escapeHtml(paperUrl)}" target="_blank" rel="noopener">Presentation</a>` : `<a class="paper-link" href="#" onclick="alert('No manuscript URL set. Edit DATA.conferences.${k}.paper')">Presentation</a>`}`;
     card.addEventListener('click', ()=>{
       if(paperUrl) window.open(paperUrl,'_blank','noopener');
       else alert('No manuscript URL set. Edit DATA.conferences.'+k+'.paper in the source.');
